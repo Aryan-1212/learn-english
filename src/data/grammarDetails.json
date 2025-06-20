@@ -1,0 +1,1155 @@
+{
+    "english_grammar_dataset": [
+      {
+        "topic": "Nouns",
+        "level": "Basic",
+        "rule": "Nouns are words that name people, places, things, or ideas",
+        "tip": "Look for words that can be preceded by 'the' or 'a/an'",
+        "subtopics": [
+          {
+            "title": "Common Nouns",
+            "rule": "General names for people, places, or things",
+            "examples": [
+              "The dog ran in the park.",
+              "She bought a book from the store.",
+              "The teacher explained the lesson clearly."
+            ]
+          },
+          {
+            "title": "Proper Nouns",
+            "rule": "Specific names that are always capitalized",
+            "examples": [
+              "London is the capital of England.",
+              "Maria speaks three languages fluently.",
+              "We visited the Eiffel Tower last summer."
+            ]
+          },
+          {
+            "title": "Abstract Nouns",
+            "rule": "Names for ideas, emotions, or concepts you cannot touch",
+            "examples": [
+              "Love conquers all difficulties.",
+              "His honesty impressed everyone.",
+              "The beauty of nature is breathtaking."
+            ]
+          },
+          {
+            "title": "Collective Nouns",
+            "rule": "Names for groups of people, animals, or things",
+            "examples": [
+              "The team celebrated their victory.",
+              "A flock of birds flew overhead.",
+              "The committee made an important decision."
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Verbs",
+        "level": "Basic",
+        "rule": "Verbs express actions, states, or occurrences",
+        "tip": "Verbs change form to show time (tense) and agree with the subject",
+        "subtopics": [
+          {
+            "title": "Action Verbs",
+            "rule": "Show physical or mental actions",
+            "examples": [
+              "She runs five miles every morning.",
+              "The students study for their exams.",
+              "He thinks about his future career."
+            ]
+          },
+          {
+            "title": "Linking Verbs",
+            "rule": "Connect the subject to information about it",
+            "examples": [
+              "The soup tastes delicious.",
+              "She is a talented musician.",
+              "The flowers smell wonderful."
+            ]
+          },
+          {
+            "title": "Helping Verbs",
+            "rule": "Work with main verbs to form tenses or show mood",
+            "examples": [
+              "I have finished my homework.",
+              "She will arrive at noon tomorrow.",
+              "They are playing soccer right now."
+            ]
+          },
+          {
+            "title": "Regular vs Irregular Verbs",
+            "rule": "Regular verbs add -ed for past tense; irregular verbs change completely",
+            "examples": [
+              "I walked to school yesterday. (regular)",
+              "She went to the market this morning. (irregular)",
+              "We have eaten dinner already. (irregular)"
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Adjectives",
+        "level": "Basic",
+        "rule": "Adjectives describe or modify nouns and pronouns",
+        "tip": "Adjectives usually come before the noun they describe",
+        "subtopics": [
+          {
+            "title": "Descriptive Adjectives",
+            "rule": "Describe qualities, characteristics, or attributes",
+            "examples": [
+              "The beautiful sunset painted the sky orange.",
+              "He wore a comfortable blue shirt.",
+              "The ancient castle stood on the hill."
+            ]
+          },
+          {
+            "title": "Demonstrative Adjectives",
+            "rule": "Point out specific nouns (this, that, these, those)",
+            "examples": [
+              "This book is very interesting.",
+              "Those students work very hard.",
+              "That car belongs to my neighbor."
+            ]
+          },
+          {
+            "title": "Possessive Adjectives",
+            "rule": "Show ownership or relationship (my, your, his, her, its, our, their)",
+            "examples": [
+              "My sister lives in California.",
+              "Their house has a beautiful garden.",
+              "His opinion matters to me."
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Adverbs",
+        "level": "Basic",
+        "rule": "Adverbs modify verbs, adjectives, or other adverbs",
+        "tip": "Many adverbs end in -ly, but not all words ending in -ly are adverbs",
+        "subtopics": [
+          {
+            "title": "Adverbs of Manner",
+            "rule": "Describe how an action is performed",
+            "examples": [
+              "She speaks English fluently.",
+              "He drove carefully through the storm.",
+              "The children played quietly in the room."
+            ]
+          },
+          {
+            "title": "Adverbs of Time",
+            "rule": "Tell when something happens",
+            "examples": [
+              "We will meet tomorrow at the cafe.",
+              "She always arrives early for meetings.",
+              "Recently, he has been working late."
+            ]
+          },
+          {
+            "title": "Adverbs of Frequency",
+            "rule": "Show how often something happens",
+            "examples": [
+              "I usually drink coffee in the morning.",
+              "They never miss their favorite TV show.",
+              "She sometimes takes the bus to work."
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Pronouns",
+        "level": "Basic",
+        "rule": "Pronouns replace nouns to avoid repetition",
+        "tip": "Make sure pronouns clearly refer to the correct noun",
+        "subtopics": [
+          {
+            "title": "Personal Pronouns",
+            "rule": "Refer to specific people or things (I, you, he, she, it, we, they)",
+            "examples": [
+              "She enjoys reading mystery novels.",
+              "They visited us last weekend.",
+              "It is raining heavily outside."
+            ]
+          },
+          {
+            "title": "Possessive Pronouns",
+            "rule": "Show ownership without needing a noun (mine, yours, his, hers, ours, theirs)",
+            "examples": [
+              "This pen is mine, not yours.",
+              "The decision is theirs to make.",
+              "Is this jacket hers or his?"
+            ]
+          },
+          {
+            "title": "Reflexive Pronouns",
+            "rule": "Refer back to the subject (myself, yourself, himself, herself, itself, ourselves, yourselves, themselves)",
+            "examples": [
+              "I taught myself how to play guitar.",
+              "She looked at herself in the mirror.",
+              "We enjoyed ourselves at the party."
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Present Tenses",
+        "level": "Basic",
+        "rule": "Present tenses describe actions happening now, regularly, or as general truths",
+        "tip": "Choose the tense based on whether the action is habitual, ongoing, or completed",
+        "subtopics": [
+          {
+            "title": "Simple Present",
+            "rule": "Describes habits, facts, and general truths",
+            "examples": [
+              "She works at a bank downtown.",
+              "The sun rises in the east.",
+              "Dogs bark when they're excited."
+            ]
+          },
+          {
+            "title": "Present Continuous",
+            "rule": "Describes actions happening right now or temporary situations",
+            "examples": [
+              "I am reading a fascinating book.",
+              "They are building a new shopping mall.",
+              "She is studying for her final exams."
+            ]
+          },
+          {
+            "title": "Present Perfect",
+            "rule": "Connects past actions to the present moment",
+            "examples": [
+              "I have lived here for five years.",
+              "She has just finished her presentation.",
+              "We have visited that museum several times."
+            ]
+          },
+          {
+            "title": "Present Perfect Continuous",
+            "rule": "Emphasizes duration of an action that started in the past and continues",
+            "examples": [
+              "He has been working here since 2020.",
+              "It has been raining for three hours.",
+              "They have been waiting for the bus."
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Past Tenses",
+        "level": "Intermediate",
+        "rule": "Past tenses describe completed actions, ongoing past situations, or past experiences",
+        "tip": "Use past tenses to tell stories and describe completed events",
+        "subtopics": [
+          {
+            "title": "Simple Past",
+            "rule": "Describes completed actions at a specific time in the past",
+            "examples": [
+              "She graduated from university last year.",
+              "We visited Paris during our vacation.",
+              "The meeting ended at 5 PM yesterday."
+            ]
+          },
+          {
+            "title": "Past Continuous",
+            "rule": "Describes ongoing actions in the past or interrupted actions",
+            "examples": [
+              "I was sleeping when the phone rang.",
+              "They were discussing the project all morning.",
+              "She was cooking dinner while he was watching TV."
+            ]
+          },
+          {
+            "title": "Past Perfect",
+            "rule": "Shows an action completed before another past action",
+            "examples": [
+              "By the time we arrived, the movie had started.",
+              "She had already eaten when I called her.",
+              "They had finished the project before the deadline."
+            ]
+          },
+          {
+            "title": "Past Perfect Continuous",
+            "rule": "Emphasizes duration of an action before another past action",
+            "examples": [
+              "He had been studying for hours before taking the test.",
+              "We had been waiting for 30 minutes when the bus arrived.",
+              "She had been working there for 10 years before she retired."
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Future Tenses",
+        "level": "Intermediate",
+        "rule": "Future tenses express planned actions, predictions, and intentions",
+        "tip": "Different future forms express different levels of certainty and planning",
+        "subtopics": [
+          {
+            "title": "Simple Future (will)",
+            "rule": "Expresses predictions, promises, and spontaneous decisions",
+            "examples": [
+              "It will rain tomorrow according to the forecast.",
+              "I will help you with your homework.",
+              "The concert will start at 8 PM sharp."
+            ]
+          },
+          {
+            "title": "Going to Future",
+            "rule": "Expresses planned actions and predictions based on evidence",
+            "examples": [
+              "We are going to move to a new house.",
+              "Look at those clouds! It's going to rain.",
+              "She is going to study medicine next year."
+            ]
+          },
+          {
+            "title": "Future Continuous",
+            "rule": "Describes ongoing actions at a specific future time",
+            "examples": [
+              "This time tomorrow, I'll be flying to Tokyo.",
+              "They will be working on the project next week.",
+              "At 3 PM, she'll be attending the meeting."
+            ]
+          },
+          {
+            "title": "Future Perfect",
+            "rule": "Shows an action that will be completed before a specific future time",
+            "examples": [
+              "By next month, I will have finished the course.",
+              "They will have arrived before the ceremony starts.",
+              "She will have completed her degree by June."
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Modal Verbs",
+        "level": "Intermediate",
+        "rule": "Modal verbs express ability, possibility, permission, obligation, and advice",
+        "tip": "Modal verbs are followed by the base form of the main verb",
+        "subtopics": [
+          {
+            "title": "Ability (can, could, be able to)",
+            "rule": "Express present and past ability or general capability",
+            "examples": [
+              "She can speak four languages fluently.",
+              "When I was young, I could run very fast.",
+              "He will be able to join us tomorrow."
+            ]
+          },
+          {
+            "title": "Permission (can, may, might)",
+            "rule": "Ask for or give permission formally and informally",
+            "examples": [
+              "Can I borrow your pen for a moment?",
+              "You may leave early if you finish your work.",
+              "Students might use the library after hours."
+            ]
+          },
+          {
+            "title": "Obligation (must, have to, should)",
+            "rule": "Express necessity, strong advice, or moral obligation",
+            "examples": [
+              "You must wear a seatbelt while driving.",
+              "I have to finish this report by tomorrow.",
+              "You should exercise regularly for good health."
+            ]
+          },
+          {
+            "title": "Possibility (might, may, could)",
+            "rule": "Express uncertainty or likelihood about present or future",
+            "examples": [
+              "It might rain later this afternoon.",
+              "She may not come to the party tonight.",
+              "This could be the solution we need."
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Conditionals",
+        "level": "Advanced",
+        "rule": "Conditionals express hypothetical situations and their consequences",
+        "tip": "Each conditional type has a specific structure and meaning",
+        "subtopics": [
+          {
+            "title": "Zero Conditional",
+            "rule": "Expresses general truths and scientific facts (if + present, present)",
+            "examples": [
+              "If you heat water to 100°C, it boils.",
+              "If I eat too much sugar, I feel sick.",
+              "Plants die if they don't get enough water."
+            ]
+          },
+          {
+            "title": "First Conditional",
+            "rule": "Expresses likely future possibilities (if + present, will + base verb)",
+            "examples": [
+              "If it rains tomorrow, we will stay home.",
+              "She will pass the exam if she studies hard.",
+              "If you arrive early, you will get good seats."
+            ]
+          },
+          {
+            "title": "Second Conditional",
+            "rule": "Expresses unlikely or imaginary present/future situations (if + past, would + base verb)",
+            "examples": [
+              "If I won the lottery, I would travel the world.",
+              "She would be happier if she lived near the sea.",
+              "If I were you, I would accept the job offer."
+            ]
+          },
+          {
+            "title": "Third Conditional",
+            "rule": "Expresses impossible past situations (if + past perfect, would have + past participle)",
+            "examples": [
+              "If I had studied harder, I would have passed the test.",
+              "She would have arrived on time if she had left earlier.",
+              "If they had invited me, I would have attended the wedding."
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Passive Voice",
+        "level": "Intermediate",
+        "rule": "Passive voice emphasizes the action or result rather than who performs it",
+        "tip": "Use passive voice when the doer is unknown, unimportant, or obvious",
+        "subtopics": [
+          {
+            "title": "Present Passive",
+            "rule": "Formed with am/is/are + past participle",
+            "examples": [
+              "English is spoken in many countries worldwide.",
+              "The reports are prepared by the accounting team.",
+              "Coffee is grown in tropical regions."
+            ]
+          },
+          {
+            "title": "Past Passive",
+            "rule": "Formed with was/were + past participle",
+            "examples": [
+              "The bridge was built in 1995.",
+              "The documents were signed yesterday morning.",
+              "The problem was solved by the IT department."
+            ]
+          },
+          {
+            "title": "Future Passive",
+            "rule": "Formed with will be + past participle",
+            "examples": [
+              "The new policy will be announced next week.",
+              "The building will be demolished next month.",
+              "Results will be published in the journal."
+            ]
+          },
+          {
+            "title": "Perfect Passive",
+            "rule": "Formed with have/has/had been + past participle",
+            "examples": [
+              "The car has been repaired successfully.",
+              "The letter had been sent before I arrived.",
+              "The project will have been completed by Friday."
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Direct and Reported Speech",
+        "level": "Intermediate",
+        "rule": "Direct speech quotes exact words; reported speech paraphrases what someone said",
+        "tip": "Remember to change pronouns, time expressions, and verb tenses in reported speech",
+        "subtopics": [
+          {
+            "title": "Reporting Statements",
+            "rule": "Use 'that' and change tense one step back in time",
+            "examples": [
+              "Direct: 'I am tired,' she said. → Reported: She said that she was tired.",
+              "Direct: 'We will come tomorrow,' they promised. → Reported: They promised they would come the next day.",
+              "Direct: 'I have finished my work,' he announced. → Reported: He announced that he had finished his work."
+            ]
+          },
+          {
+            "title": "Reporting Questions",
+            "rule": "Use 'if/whether' for yes/no questions and question words for wh-questions",
+            "examples": [
+              "Direct: 'Are you coming?' she asked. → Reported: She asked if I was coming.",
+              "Direct: 'Where do you live?' he inquired. → Reported: He inquired where I lived.",
+              "Direct: 'What time is it?' they wondered. → Reported: They wondered what time it was."
+            ]
+          },
+          {
+            "title": "Reporting Commands",
+            "rule": "Use 'told/asked + object + to + infinitive'",
+            "examples": [
+              "Direct: 'Close the door,' she said. → Reported: She told me to close the door.",
+              "Direct: 'Please help me,' he requested. → Reported: He asked me to help him.",
+              "Direct: 'Don't be late,' they warned. → Reported: They warned us not to be late."
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Comparatives and Superlatives",
+        "level": "Basic",
+        "rule": "Comparatives compare two things; superlatives compare three or more things",
+        "tip": "Use 'than' with comparatives and 'the' with superlatives",
+        "subtopics": [
+          {
+            "title": "Short Adjectives",
+            "rule": "Add -er for comparative and -est for superlative",
+            "examples": [
+              "This book is older than that one.",
+              "She is the tallest girl in the class.",
+              "Today is colder than yesterday was."
+            ]
+          },
+          {
+            "title": "Long Adjectives",
+            "rule": "Use 'more/most' with adjectives of 3+ syllables",
+            "examples": [
+              "This problem is more difficult than the last one.",
+              "She is the most intelligent student in school.",
+              "The movie was more interesting than I expected."
+            ]
+          },
+          {
+            "title": "Irregular Comparatives",
+            "rule": "Some adjectives have completely different forms",
+            "examples": [
+              "This solution is better than the previous one.",
+              "That was the worst movie I've ever seen.",
+              "We need more time to finish the project."
+            ]
+          },
+          {
+            "title": "Equal Comparisons",
+            "rule": "Use 'as...as' to show things are equal",
+            "examples": [
+              "She is as tall as her sister.",
+              "This car is not as expensive as that one.",
+              "He works as hard as anyone I know."
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Prepositions",
+        "level": "Basic",
+        "rule": "Prepositions show relationships between words in terms of time, place, and direction",
+        "tip": "Preposition usage often needs to be memorized as it can be idiomatic",
+        "subtopics": [
+          {
+            "title": "Prepositions of Time",
+            "rule": "Use specific prepositions with different time expressions",
+            "examples": [
+              "The meeting is at 3 PM on Monday.",
+              "She was born in December 1995.",
+              "We've been waiting for 30 minutes."
+            ]
+          },
+          {
+            "title": "Prepositions of Place",
+            "rule": "Show location and position in space",
+            "examples": [
+              "The cat is sitting on the table.",
+              "The book is between the lamp and clock.",
+              "There's a beautiful park near our house."
+            ]
+          },
+          {
+            "title": "Prepositions of Movement",
+            "rule": "Show direction and motion from one place to another",
+            "examples": [
+              "She walked through the forest quietly.",
+              "The bird flew over the tall building.",
+              "We drove across the bridge at sunset."
+            ]
+          },
+          {
+            "title": "Dependent Prepositions",
+            "rule": "Certain verbs and adjectives require specific prepositions",
+            "examples": [
+              "She apologized for being late to class.",
+              "I'm interested in learning new languages.",
+              "They depend on public transportation daily."
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Articles",
+        "level": "Basic",
+        "rule": "Articles (a, an, the) specify whether nouns are definite or indefinite",
+        "tip": "Use 'a' before consonant sounds, 'an' before vowel sounds, 'the' for specific things",
+        "subtopics": [
+          {
+            "title": "Indefinite Articles (a, an)",
+            "rule": "Used with singular countable nouns mentioned for the first time",
+            "examples": [
+              "I need a pen to write this letter.",
+              "She bought an umbrella for the rainy season.",
+              "There's a cat sleeping in the garden."
+            ]
+          },
+          {
+            "title": "Definite Article (the)",
+            "rule": "Used when both speaker and listener know which specific thing is meant",
+            "examples": [
+              "Please close the door behind you.",
+              "The sun is shining brightly today.",
+              "I loved the book you recommended to me."
+            ]
+          },
+          {
+            "title": "No Article (Zero Article)",
+            "rule": "Used with plural countable nouns and uncountable nouns in general",
+            "examples": [
+              "Dogs are loyal and friendly animals.",
+              "She loves listening to classical music.",
+              "Water is essential for all living things."
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Subject-Verb Agreement",
+        "level": "Basic",
+        "rule": "Subjects and verbs must agree in number (singular or plural)",
+        "tip": "Focus on the main subject, not the words between subject and verb",
+        "subtopics": [
+          {
+            "title": "Singular and Plural Subjects",
+            "rule": "Singular subjects take singular verbs; plural subjects take plural verbs",
+            "examples": [
+              "The student studies hard every night.",
+              "The students study together in the library.",
+              "She works at the downtown office building."
+            ]
+          },
+          {
+            "title": "Compound Subjects",
+            "rule": "Subjects joined by 'and' are usually plural; subjects joined by 'or' agree with the nearest subject",
+            "examples": [
+              "Tom and Sarah are coming to dinner tonight.",
+              "Either the teacher or the students are responsible.",
+              "Neither the manager nor his assistants were available."
+            ]
+          },
+          {
+            "title": "Collective Nouns",
+            "rule": "Treat collective nouns as singular when acting as one unit",
+            "examples": [
+              "The team is practicing for the championship.",
+              "The committee has made its final decision.",
+              "The family travels together every summer vacation."
+            ]
+          },
+          {
+            "title": "Indefinite Pronouns",
+            "rule": "Some are always singular, some always plural, some depend on context",
+            "examples": [
+              "Everyone is invited to the celebration party.",
+              "Both of the books are interesting reads.",
+              "Some of the cake is left over."
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Countable and Uncountable Nouns",
+        "level": "Intermediate",
+        "rule": "Countable nouns can be counted; uncountable nouns cannot be counted individually",
+        "tip": "Use different quantifiers with countable and uncountable nouns",
+        "subtopics": [
+          {
+            "title": "Countable Nouns",
+            "rule": "Can be counted and have singular and plural forms",
+            "examples": [
+              "I have three books on my desk.",
+              "She bought some apples at the market.",
+              "There are many students in the classroom."
+            ]
+          },
+          {
+            "title": "Uncountable Nouns",
+            "rule": "Cannot be counted individually and have no plural form",
+            "examples": [
+              "We need more information about the project.",
+              "There's some milk in the refrigerator.",
+              "She has extensive knowledge of art history."
+            ]
+          },
+          {
+            "title": "Quantifiers with Countable Nouns",
+            "rule": "Use many, few, a few, several, a number of",
+            "examples": [
+              "Many people attended the outdoor concert.",
+              "Few students failed the challenging final exam.",
+              "Several options are available for consideration."
+            ]
+          },
+          {
+            "title": "Quantifiers with Uncountable Nouns",
+            "rule": "Use much, little, a little, a great deal of",
+            "examples": [
+              "There isn't much time left to finish.",
+              "She has little patience for rude behavior.",
+              "A great deal of effort went into this."
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Gerunds and Infinitives",
+        "level": "Intermediate",
+        "rule": "Gerunds (-ing forms) and infinitives (to + base verb) function as nouns",
+        "tip": "Some verbs are followed by gerunds, others by infinitives, some by both",
+        "subtopics": [
+          {
+            "title": "Gerunds as Subjects",
+            "rule": "Gerunds can be the subject of a sentence",
+            "examples": [
+              "Swimming is excellent exercise for health.",
+              "Reading books improves vocabulary and knowledge.",
+              "Cooking requires patience and practice."
+            ]
+          },
+          {
+            "title": "Verbs Followed by Gerunds",
+            "rule": "Some verbs are always followed by gerunds",
+            "examples": [
+              "I enjoy listening to classical music.",
+              "She finished writing her research paper.",
+              "They avoid eating processed foods."
+            ]
+          },
+          {
+            "title": "Verbs Followed by Infinitives",
+            "rule": "Some verbs are always followed by infinitives",
+            "examples": [
+              "I want to learn Spanish fluently.",
+              "She decided to accept the job offer.",
+              "They plan to visit Europe next summer."
+            ]
+          },
+          {
+            "title": "Verbs with Different Meanings",
+            "rule": "Some verbs change meaning with gerunds vs infinitives",
+            "examples": [
+              "I remember meeting him last year. (past action)",
+              "Please remember to call me tonight. (future action)",
+              "She stopped smoking for her health. (quit the habit)"
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Questions and Question Tags",
+        "level": "Basic",
+        "rule": "Questions gather information; question tags confirm or check information",
+        "tip": "Invert subject and auxiliary verb in questions; use opposite polarity in tags",
+        "subtopics": [
+          {
+            "title": "Yes/No Questions",
+            "rule": "Start with auxiliary verb or 'be' verb",
+            "examples": [
+              "Are you coming to the party tonight?",
+              "Did she finish her homework assignment?",
+              "Have they arrived at the airport yet?"
+            ]
+          },
+          {
+            "title": "Wh- Questions",
+            "rule": "Start with question words (what, where, when, why, who, how)",
+            "examples": [
+              "What time does the movie start tonight?",
+              "Where did you buy that beautiful dress?",
+              "How long have you been studying English?"
+            ]
+          },
+          {
+            "title": "Question Tags",
+            "rule": "Short questions added to statements for confirmation",
+            "examples": [
+              "You're from Canada, aren't you?",
+              "She doesn't like spicy food, does she?",
+              "They will come tomorrow, won't they?"
+            ]
+          },
+          {
+            "title": "Indirect Questions",
+            "rule": "More polite way to ask questions using phrases like 'Could you tell me...'",
+            "examples": [
+              "Could you tell me where the station is?",
+              "Do you know what time the store closes?",
+              "I wonder if you could help me."
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Relative Clauses",
+        "level": "Intermediate",
+        "rule": "Relative clauses give additional information about nouns using relative pronouns",
+        "tip": "Use 'who' for people, 'which' for things, 'that' for both",
+        "subtopics": [
+          {
+            "title": "Defining Relative Clauses",
+            "rule": "Essential information that identifies which person/thing we mean",
+            "examples": [
+              "The woman who lives next door is a doctor.",
+              "The book that I borrowed was fascinating.",
+              "Students whose grades are high get scholarships."
+            ]
+          },
+          {
+            "title": "Non-defining Relative Clauses",
+            "rule": "Extra information about someone/something already identified",
+            "examples": [
+              "My brother, who lives in London, is visiting.",
+              "The Eiffel Tower, which is in Paris, is iconic.",
+              "Shakespeare, whose plays are famous, lived centuries ago."
+            ]
+          },
+          {
+            "title": "Relative Pronouns as Objects",
+            "rule": "Relative pronouns can be the object of the relative clause",
+            "examples": [
+              "The movie (that) we watched was excellent.",
+              "The person (whom) you met is my cousin.",
+              "The house (which) they bought needs renovation."
+            ]
+          },
+          {
+            "title": "Prepositions in Relative Clauses",
+            "rule": "Prepositions can come at the end or before the relative pronoun",
+            "examples": [
+              "The pen (that) I wrote with is broken.",
+              "The company for which she works is expanding.",
+              "The topic (that) we talked about was interesting."
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Conjunctions",
+        "level": "Basic",
+        "rule": "Conjunctions connect words, phrases, or clauses in sentences",
+        "tip": "Choose conjunctions based on the relationship between ideas",
+        "subtopics": [
+          {
+            "title": "Coordinating Conjunctions",
+            "rule": "Connect equal parts of sentences (and, but, or, nor, for, so, yet)",
+            "examples": [
+              "She studied hard, and she passed the exam.",
+              "I wanted to go, but it was raining heavily.",
+              "You can walk or take the bus downtown."
+            ]
+          },
+          {
+            "title": "Subordinating Conjunctions",
+            "rule": "Connect main clauses with dependent clauses",
+            "examples": [
+              "Although it was late, we continued working.",
+              "Because she was sick, she stayed home.",
+              "I'll call you when I arrive at the station."
+            ]
+          },
+          {
+            "title": "Correlative Conjunctions",
+            "rule": "Work in pairs to connect equal elements (either...or, neither...nor, both...and)",
+            "examples": [
+              "Either you come with us or stay here.",
+              "She is both intelligent and hardworking.",
+              "Neither the manager nor the staff were available."
+            ]
+          },
+          {
+            "title": "Conjunctive Adverbs",
+            "rule": "Connect ideas and show relationships (however, therefore, moreover, furthermore)",
+            "examples": [
+              "The weather was bad; however, we went hiking.",
+              "She studied hard; therefore, she got good grades.",
+              "The project is expensive; moreover, it's time-consuming."
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Punctuation Rules",
+        "level": "Basic",
+        "rule": "Punctuation marks organize text and clarify meaning",
+        "tip": "Read sentences aloud to hear natural pauses and use appropriate punctuation",
+        "subtopics": [
+          {
+            "title": "Periods and Question Marks",
+            "rule": "Periods end statements; question marks end questions",
+            "examples": [
+              "The meeting starts at 9 AM tomorrow morning.",
+              "What time does the library close today?",
+              "Please submit your report by Friday afternoon."
+            ]
+          },
+          {
+            "title": "Commas",
+            "rule": "Separate items in lists, join clauses, and set off extra information",
+            "examples": [
+              "I bought apples, oranges, and bananas today.",
+              "When she arrived, the party had already started.",
+              "My sister, who lives in Tokyo, is visiting."
+            ]
+          },
+          {
+            "title": "Apostrophes",
+            "rule": "Show possession and form contractions",
+            "examples": [
+              "This is Sarah's book from the library.",
+              "The students' projects were displayed proudly.",
+              "I can't attend the meeting this afternoon."
+            ]
+          },
+          {
+            "title": "Quotation Marks",
+            "rule": "Enclose direct speech and quotations from sources",
+            "examples": [
+              "She said, \"I'll be there at noon.\"",
+              "The sign read \"No Parking Allowed.\"",
+              "According to the article, \"Exercise improves health.\""
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Word Order",
+        "level": "Basic",
+        "rule": "English follows Subject-Verb-Object order in most sentences",
+        "tip": "Place adjectives before nouns and adverbs near the verbs they modify",
+        "subtopics": [
+          {
+            "title": "Basic Sentence Structure",
+            "rule": "Follow Subject + Verb + Object pattern",
+            "examples": [
+              "The teacher explained the lesson clearly.",
+              "Students completed their assignments on time.",
+              "She reads mystery novels every weekend."
+            ]
+          },
+          {
+            "title": "Adjective Order",
+            "rule": "Multiple adjectives follow specific order: opinion, size, age, shape, color, origin, material, purpose",
+            "examples": [
+              "She wore a beautiful long red silk dress.",
+              "They live in a charming old wooden house.",
+              "He bought an expensive new German sports car."
+            ]
+          },
+          {
+            "title": "Adverb Placement",
+            "rule": "Adverbs can go at the beginning, middle, or end of sentences",
+            "examples": [
+              "Carefully, she opened the ancient treasure box.",
+              "She carefully opened the ancient treasure box.",
+              "She opened the ancient treasure box carefully."
+            ]
+          },
+          {
+            "title": "Question Word Order",
+            "rule": "Invert subject and auxiliary verb in questions",
+            "examples": [
+              "Are you coming to the dinner party?",
+              "What did she say about the proposal?",
+              "How long have they been waiting here?"
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Phrasal Verbs",
+        "level": "Intermediate",
+        "rule": "Phrasal verbs combine a verb with a preposition or adverb to create new meanings",
+        "tip": "Phrasal verb meanings are often idiomatic and need to be memorized",
+        "subtopics": [
+          {
+            "title": "Separable Phrasal Verbs",
+            "rule": "Object can come between the verb and particle",
+            "examples": [
+              "Please turn off the lights. / Turn the lights off.",
+              "She put on her coat. / She put her coat on.",
+              "I'll pick you up at seven o'clock."
+            ]
+          },
+          {
+            "title": "Inseparable Phrasal Verbs",
+            "rule": "Object must come after the complete phrasal verb",
+            "examples": [
+              "She looks after her elderly grandmother daily.",
+              "We ran into some old friends yesterday.",
+              "The plane took off exactly on schedule."
+            ]
+          },
+          {
+            "title": "Three-word Phrasal Verbs",
+            "rule": "Verb + adverb + preposition combinations",
+            "examples": [
+              "I'm looking forward to the summer vacation.",
+              "She came up with a brilliant solution.",
+              "We ran out of milk this morning."
+            ]
+          },
+          {
+            "title": "Common Phrasal Verbs",
+            "rule": "Frequently used phrasal verbs in everyday conversation",
+            "examples": [
+              "Can you figure out this math problem?",
+              "The meeting has been called off today.",
+              "She grew up in a small rural town."
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Reported Speech - Advanced",
+        "level": "Advanced",
+        "rule": "Complex reporting involves changing multiple elements and maintaining meaning",
+        "tip": "Pay attention to reporting verbs that change the meaning",
+        "subtopics": [
+          {
+            "title": "Reporting Verbs",
+            "rule": "Different verbs express different attitudes (suggest, insist, deny, admit)",
+            "examples": [
+              "She suggested that we leave early.",
+              "He denied taking the money from the safe.",
+              "They admitted making a serious mistake."
+            ]
+          },
+          {
+            "title": "Time and Place Changes",
+            "rule": "Adapt time and place expressions to the reporting context",
+            "examples": [
+              "Direct: 'I'll see you tomorrow.' → Reported: She said she would see me the next day.",
+              "Direct: 'I was here yesterday.' → Reported: He said he had been there the previous day.",
+              "Direct: 'Come to this place now.' → Reported: She told me to go to that place immediately."
+            ]
+          },
+          {
+            "title": "Modal Verbs in Reported Speech",
+            "rule": "Some modals change, others remain the same",
+            "examples": [
+              "Direct: 'I can help you.' → Reported: She said she could help me.",
+              "Direct: 'You must be careful.' → Reported: He said I had to be careful.",
+              "Direct: 'It might rain.' → Reported: They said it might rain."
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Subjunctive Mood",
+        "level": "Advanced",
+        "rule": "Subjunctive mood expresses wishes, suggestions, and hypothetical situations",
+        "tip": "Subjunctive often uses base form of verb regardless of subject",
+        "subtopics": [
+          {
+            "title": "Present Subjunctive",
+            "rule": "Used after verbs like suggest, recommend, insist, demand",
+            "examples": [
+              "I suggest that he study harder for exams.",
+              "The doctor recommended that she rest completely.",
+              "They insisted that everyone be on time."
+            ]
+          },
+          {
+            "title": "Past Subjunctive (were)",
+            "rule": "Use 'were' for all subjects in hypothetical situations",
+            "examples": [
+              "If I were rich, I would travel worldwide.",
+              "She acts as if she were the boss.",
+              "I wish I were taller than I am."
+            ]
+          },
+          {
+            "title": "Wishes and Regrets",
+            "rule": "Express wishes about present/past with specific structures",
+            "examples": [
+              "I wish I had more free time. (present wish)",
+              "She wishes she had studied abroad. (past regret)",
+              "If only I could speak French fluently!"
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Ellipsis and Substitution",
+        "level": "Advanced",
+        "rule": "Avoid repetition by omitting words or using substitute words",
+        "tip": "Use ellipsis and substitution to make speech more natural and concise",
+        "subtopics": [
+          {
+            "title": "Ellipsis in Comparisons",
+            "rule": "Omit repeated words in comparative structures",
+            "examples": [
+              "She works harder than I do. (than I work)",
+              "This book is more interesting than that one is. (than that one is interesting)",
+              "He can swim faster than she can. (than she can swim)"
+            ]
+          },
+          {
+            "title": "Substitution with 'do/does/did'",
+            "rule": "Replace repeated verb phrases with forms of 'do'",
+            "examples": [
+              "I like coffee, and she does too.",
+              "They didn't finish their work, but we did.",
+              "She studies every day, and he should do the same."
+            ]
+          },
+          {
+            "title": "Substitution with 'one/ones'",
+            "rule": "Replace repeated nouns with 'one' or 'ones'",
+            "examples": [
+              "I prefer the red car to the blue one.",
+              "These books are more expensive than those ones.",
+              "Which jacket do you like, this one or that one?"
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Discourse Markers",
+        "level": "Intermediate",
+        "rule": "Discourse markers connect ideas and guide readers through text",
+        "tip": "Use discourse markers to make your writing flow smoothly and logically",
+        "subtopics": [
+          {
+            "title": "Addition and Contrast",
+            "rule": "Show how ideas relate to each other",
+            "examples": [
+              "Furthermore, the research supports our hypothesis completely.",
+              "However, there are some limitations to consider.",
+              "On the other hand, the results were encouraging."
+            ]
+          },
+          {
+            "title": "Cause and Effect",
+            "rule": "Show relationships between actions and consequences",
+            "examples": [
+              "As a result, sales increased by 20%.",
+              "Consequently, we need to hire more staff.",
+              "Due to the weather, the event was postponed."
+            ]
+          },
+          {
+            "title": "Sequencing and Summarizing",
+            "rule": "Organize ideas in logical order and conclude",
+            "examples": [
+              "First, we analyzed the data thoroughly.",
+              "Finally, we reached our conclusion about the project.",
+              "In conclusion, the experiment was successful overall."
+            ]
+          }
+        ]
+      }
+    ]
+  }

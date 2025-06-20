@@ -1,0 +1,127 @@
+[
+  {
+    "id": 1,
+    "title": "Subject-Verb Agreement",
+    "rule": "The subject and verb must agree in number (singular or plural).",
+    "examples": [
+      "✓ The cat runs quickly.",
+      "✓ The cats run quickly.",
+      "✗ The cat run quickly.",
+      "✗ The cats runs quickly."
+    ],
+    "difficulty": "Basic",
+    "tip": "Singular subjects take singular verbs, plural subjects take plural verbs."
+  },
+  {
+    "id": 2,
+    "title": "Past Perfect Tense",
+    "rule": "Use 'had' + past participle to show an action completed before another past action.",
+    "examples": [
+      "✓ I had finished my homework before dinner.",
+      "✓ She had left when I arrived.",
+      "✗ I have finished my homework before dinner.",
+      "✗ She left when I had arrived."
+    ],
+    "difficulty": "Intermediate",
+    "tip": "Past perfect shows which action happened first in the past."
+  },
+  {
+    "id": 3,
+    "title": "Articles (A, An, The)",
+    "rule": "Use 'a' before consonant sounds, 'an' before vowel sounds, 'the' for specific things.",
+    "examples": [
+      "✓ I saw a dog in the park.",
+      "✓ She is an honest person.",
+      "✓ The book on the table is mine.",
+      "✗ I saw dog in park."
+    ],
+    "difficulty": "Basic",
+    "tip": "Listen to the sound, not just the letter: 'an hour' (vowel sound), 'a university' (consonant sound)."
+  },
+  {
+    "id": 4,
+    "title": "Conditional Sentences",
+    "rule": "First conditional: If + present simple, will + base verb (for likely future situations).",
+    "examples": [
+      "✓ If it rains, I will stay home.",
+      "✓ If you study hard, you will pass.",
+      "✗ If it will rain, I stay home.",
+      "✗ If you studied hard, you will pass."
+    ],
+    "difficulty": "Intermediate",
+    "tip": "First conditional is for real possibilities in the future."
+  },
+  {
+    "id": 5,
+    "title": "Present Perfect vs Past Simple",
+    "rule": "Present perfect connects past to present; past simple is for completed past actions.",
+    "examples": [
+      "✓ I have lived here for 5 years. (still living)",
+      "✓ I lived there in 2010. (finished)",
+      "✗ I have lived there in 2010.",
+      "✗ I lived here for 5 years. (if still living)"
+    ],
+    "difficulty": "Intermediate",
+    "tip": "Use present perfect when the time period isn't finished or the action affects now."
+  },
+  {
+    "id": 6,
+    "title": "Countable and Uncountable Nouns",
+    "rule": "Countable nouns can be counted (one apple, two apples). Uncountable nouns cannot (water, information).",
+    "examples": [
+      "✓ I have three books.",
+      "✓ I need some water.",
+      "✗ I have three waters."
+    ],
+    "difficulty": "Basic",
+    "tip": "Use 'some' or 'much' for uncountable nouns, 'many' or numbers for countable nouns."
+  },
+  {
+    "id": 7,
+    "title": "Modal Verbs (can, could, may, might, must, should, etc.)",
+    "rule": "Modal verbs express ability, possibility, necessity, or advice. They are followed by the base form of the verb.",
+    "examples": [
+      "✓ She can swim.",
+      "✓ You should see a doctor.",
+      "✗ He musts go now."
+    ],
+    "difficulty": "Intermediate",
+    "tip": "Modals never take 'to' before the verb and do not change for person or number."
+  },
+  {
+    "id": 8,
+    "title": "Comparatives and Superlatives",
+    "rule": "Use '-er' or 'more' for comparatives, '-est' or 'most' for superlatives.",
+    "examples": [
+      "✓ She is taller than her brother.",
+      "✓ This is the most interesting book.",
+      "✗ She is more tall than her brother."
+    ],
+    "difficulty": "Basic",
+    "tip": "Short adjectives: add '-er'/'-est'. Long adjectives: use 'more'/'most'."
+  },
+  {
+    "id": 9,
+    "title": "Passive Voice",
+    "rule": "Use 'be' + past participle to make the passive voice. The focus is on the action, not the doer.",
+    "examples": [
+      "✓ The cake was eaten by the children.",
+      "✓ English is spoken here.",
+      "✗ The cake eaten by the children."
+    ],
+    "difficulty": "Intermediate",
+    "tip": "Use passive when the doer is unknown, unimportant, or obvious."
+  },
+  {
+    "id": 10,
+    "title": "Reported Speech",
+    "rule": "Change the tense, pronouns, and time expressions when reporting what someone said.",
+    "examples": [
+      "✓ She said that she was tired.",
+      "✓ He told me he would call.",
+      "✗ She said she is tired."
+    ],
+    "difficulty": "Advanced",
+    "tip": "Backshift the tense: present → past, will → would, etc."
+  }
+] 
