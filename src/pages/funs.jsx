@@ -898,6 +898,14 @@ const GrammarRuleCards = ({ onBack }) => {
   const [currentRule, setCurrentRule] = useState(0);
   const [bookmarked, setBookmarked] = useState(new Set());
   const rules = grammarDetails.english_grammar_dataset;
+  const contentRef = useRef(null);
+
+  useEffect(() => {
+    if (contentRef.current) {
+      contentRef.current.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }, [currentRule]);
+
   if (!rules || !rules.length) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -936,10 +944,14 @@ const GrammarRuleCards = ({ onBack }) => {
     }
   };
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [currentRule]);
+
   return (
     <div className="min-h-screen p-4 pt-20">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-8 items-stretch">
-        <div className="flex-1 min-w-0">
+        <div ref={contentRef} className="flex-1 min-w-0">
           <div className="flex items-center justify-between mb-6">
             <button
               onClick={onBack}

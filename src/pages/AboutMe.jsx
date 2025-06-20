@@ -18,7 +18,7 @@ const AboutMe = () => {
         {/* Image & Socials Section */}
         <div className="flex flex-col items-center text-center">
           <img
-            src="/src/assets/image.jpg"
+            src="/assets/image.jpg"
             alt="Profile"
             className="w-48 h-56 sm:w-56 sm:h-64 lg:w-64 lg:h-80 rounded-2xl border-4 border-purple-400 shadow-lg object-cover"
           />
