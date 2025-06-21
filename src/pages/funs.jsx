@@ -598,25 +598,15 @@ const VocabularyCards = ({ onBack }) => {
       let tries = 0;
       while (validWords.length < 10 && tries < 30) {
         tries++;
-        // Try alternative API first (no CORS restrictions)
+        // Try original API with CORS proxy first
         let words = [];
         try {
-          // API Ninjas doesn't support limit parameter, so we'll fetch multiple requests
-          const promises = Array(10 - validWords.length).fill().map(() => 
-            fetch('https://api.api-ninjas.com/v1/randomword?type=noun')
-          );
-          const responses = await Promise.all(promises);
-          const dataPromises = responses.map(res => res.json());
-          const dataArray = await Promise.all(dataPromises);
-          words = dataArray.map(item => item.word).filter(Boolean);
+          const res = await fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent('https://random-word-api.herokuapp.com/word?number=' + (10 - validWords.length))}`);s
+          words = await res.json();
         } catch {
-          // Fallback to original API with CORS proxy
-          try {
-            const res = await fetch('https://cors-anywhere.herokuapp.com/https://random-word-api.herokuapp.com/word?number=' + (10 - validWords.length));
-            words = await res.json();
-          } catch {
-            words = [];
-          }
+          // Fallback to a curated word list if API fails
+          const fallbackWords = ['serendipity', 'ephemeral', 'mellifluous', 'ubiquitous', 'serendipitous', 'quintessential', 'perspicacious', 'magnanimous', 'eloquent', 'resilient', 'authentic', 'profound', 'enigmatic', 'luminous', 'tranquil', 'arduous', 'benevolent', 'diligent', 'eloquent', 'frugal', 'gratitude', 'humility', 'integrity', 'jubilant', 'kindness'];
+          words = fallbackWords.slice(0, 10 - validWords.length);
         }
         // Check each word in dictionaryapi.dev
         const checks = await Promise.all(words.map(async word => {
