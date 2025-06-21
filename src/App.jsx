@@ -458,15 +458,12 @@ function AppContent() {
       setIsModelLoading(true);
       const prompt = promptText || inputText;
       if (!prompt.trim()) { setIsModelLoading(false); return; }
-
-      // If the conversationType has changed, reset the conversation to only the new greeting
-      if (mode === 'conversation' && conversationType && conversation.length === 1 && conversation[0].role === 'assistant') {
-        setConversation([conversation[0]]);
-      }
-
-      setConversation((prev) => [...prev, { role: "user", content: prompt }]);
+  
+      // Add user message to conversation
+      const newUserMessage = { role: "user", content: prompt };
+      setConversation((prev) => [...prev, newUserMessage]);
       setInputText(""); // Clear input immediately after appending user message
-
+  
       let systemPrompt = "";
       
       // Explicit logic to ensure correct prompt is used
@@ -482,43 +479,51 @@ function AppContent() {
       } else if (mode === 'talk') {
         // Tutor mode - always use tutor prompt
         systemPrompt = `You are an experienced and encouraging English tutor helping a student improve their English skills. Your role is to:
-
-1. **Provide detailed explanations** when correcting grammar, vocabulary, or pronunciation
-2. **Give specific examples** to illustrate your points
-3. **Ask follow-up questions** to encourage practice and deeper understanding
-4. **Offer constructive feedback** that builds confidence
-5. **Explain the reasoning** behind language rules and usage
-6. **Suggest alternative expressions** to expand vocabulary
-7. **Maintain a supportive and patient tone** throughout the conversation
-
-When responding:
-- If the student makes an error, explain what's wrong and why, then provide the correct version
-- If they ask a question, give a comprehensive but clear answer
-- If they share something, respond naturally and ask relevant follow-up questions
-- Keep responses conversational but educational (aim for 2-4 sentences)
-- Always encourage continued practice and learning
-
-Remember: You're not just correcting mistakes, you're helping someone become more confident and proficient in English.`;
+  
+  1. **Provide detailed explanations** when correcting grammar, vocabulary, or pronunciation
+  2. **Give specific examples** to illustrate your points
+  3. **Ask follow-up questions** to encourage practice and deeper understanding
+  4. **Offer constructive feedback** that builds confidence
+  5. **Explain the reasoning** behind language rules and usage
+  6. **Suggest alternative expressions** to expand vocabulary
+  7. **Maintain a supportive and patient tone** throughout the conversation
+  
+  When responding:
+  - If the student makes an error, explain what's wrong and why, then provide the correct version
+  - If they ask a question, give a comprehensive but clear answer
+  - If they share something, respond naturally and ask relevant follow-up questions
+  - Keep responses conversational but educational (aim for 2-4 sentences)
+  - Always encourage continued practice and learning
+  
+  Remember: You're not just correcting mistakes, you're helping someone become more confident and proficient in English.`;
       }
-
+  
       // Get the model
       const model = genAI.getGenerativeModel({ model: "models/gemini-1.5-flash" });
-
-      // Prepare the conversation history for context
-      const conversationHistory = conversation.map(msg => 
-        `${msg.role === 'user' ? 'User' : 'Assistant'}: ${msg.content}`
-      ).join('\n');
-
+  
+      // Build conversation history including the new user message
+      const updatedConversation = [...conversation, newUserMessage];
+      
+      // Prepare the conversation history for context (exclude system messages)
+      const conversationHistory = updatedConversation
+        .filter(msg => msg.role !== 'system') // Filter out any system messages
+        .map(msg => 
+          `${msg.role === 'user' ? 'User' : 'Assistant'}: ${msg.content}`
+        ).join('\n');
+  
       // Create the full prompt with system instruction and conversation history
-      const fullPrompt = `${systemPrompt}\n\nConversation history:\n${conversationHistory}\n\nUser: ${prompt}\n\nAssistant:`;
-
+      const fullPrompt = `${systemPrompt}\n\nConversation history:\n${conversationHistory}\n\nPlease respond as the character/role specified in the system prompt above. Do not break character.`;
+  
       // Generate content
       const result = await model.generateContent(fullPrompt);
       const response = await result.response;
       let responseText = response.text();
-      // Remove leading 'Assistant:' (case-insensitive, with or without space)
-      responseText = responseText.replace(/^Assistant:\s*/i, "");
       
+      // Clean up the response - remove any leading role indicators
+      responseText = responseText.replace(/^(Assistant|AI|Bot):\s*/i, "");
+      responseText = responseText.trim();
+      
+      // Update conversation with AI response
       setConversation((prev) => [
         ...prev,
         { role: "assistant", content: responseText },
@@ -542,31 +547,40 @@ Remember: You're not just correcting mistakes, you're helping someone become mor
     setTranscript("");
   };
 
-  const startConversation = async () => {
-    if (conversationType) {
-      // Clear previous conversation when starting a new role-play
-      resetChat();
-      const selectedType = conversationTypes.find(type => type.value === conversationType);
-      if (selectedType) {
-        // Generate the greeting using the AI model with the correct system prompt
-        const systemPrompt = selectedType.prompt;
-        const model = genAI.getGenerativeModel({ model: "models/gemini-1.5-flash" });
-        const fullPrompt = `${systemPrompt}\n\nAssistant:`;
-        try {
-          setIsModelLoading(true);
-          const result = await model.generateContent(fullPrompt);
-          const response = await result.response;
-          const greeting = response.text();
-          setConversation([{ role: "assistant", content: greeting }]);
-          speakResponse(greeting);
-        } catch (error) {
-          setConversation([{ role: "assistant", content: "Hello! Let's start our conversation!" }]);
-        } finally {
-          setIsModelLoading(false);
-        }
+ const startConversation = async () => {
+  if (conversationType) {
+    // Clear previous conversation when starting a new role-play
+    resetChat();
+    const selectedType = conversationTypes.find(type => type.value === conversationType);
+    if (selectedType) {
+      // Generate the greeting using the AI model with the correct system prompt
+      const systemPrompt = selectedType.prompt;
+      const model = genAI.getGenerativeModel({ model: "models/gemini-1.5-flash" });
+      
+      // Create initial prompt for greeting
+      const fullPrompt = `${systemPrompt}\n\nThis is the start of the conversation. Please provide your opening greeting and first question as specified in your role. Do not break character.`;
+      
+      try {
+        setIsModelLoading(true);
+        const result = await model.generateContent(fullPrompt);
+        const response = await result.response;
+        let greeting = response.text();
+        
+        // Clean up the response
+        greeting = greeting.replace(/^(Assistant|AI|Bot):\s*/i, "");
+        greeting = greeting.trim();
+        
+        setConversation([{ role: "assistant", content: greeting }]);
+        speakResponse(greeting);
+      } catch (error) {
+        console.error("Error generating greeting:", error);
+        setConversation([{ role: "assistant", content: "Hello! Let's start our conversation!" }]);
+      } finally {
+        setIsModelLoading(false);
       }
     }
-  };
+  }
+};
 
   // Helper to stop speech
   const stopSpeaking = () => {
