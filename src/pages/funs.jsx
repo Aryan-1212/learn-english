@@ -588,10 +588,42 @@ const VocabularyCards = ({ onBack }) => {
     if (mode !== 'top') return;
     const today = getTodayString();
     const cached = localStorage.getItem('topVocab_' + today);
-    if (cached) {
-      setTopWords(JSON.parse(cached));
-      return;
+    const lastFetchTime = localStorage.getItem('topVocab_time_' + today);
+    const now = Date.now();
+    
+    // Check if we have cached data for today and it was fetched today
+    if (cached && lastFetchTime) {
+      const timeDiff = now - parseInt(lastFetchTime);
+      const oneDayInMs = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
+      
+      // If less than 24 hours have passed, use cached data
+      if (timeDiff < oneDayInMs) {
+        setTopWords(JSON.parse(cached));
+        return;
+      }
     }
+    
+    // Clear old cached data (older than 1 day)
+    const keysToRemove = [];
+    for (let i = 0; i < localStorage.length; i++) {
+      const key = localStorage.key(i);
+      if (key && key.startsWith('topVocab_') && !key.startsWith('topVocab_time_')) {
+        const dateStr = key.replace('topVocab_', '');
+        const keyDate = new Date(dateStr);
+        const todayDate = new Date(today);
+        const diffTime = todayDate - keyDate;
+        const diffDays = diffTime / (1000 * 60 * 60 * 24);
+        
+        if (diffDays >= 1) {
+          keysToRemove.push(key);
+          keysToRemove.push('topVocab_time_' + dateStr);
+        }
+      }
+    }
+    
+    // Remove old entries
+    keysToRemove.forEach(key => localStorage.removeItem(key));
+    
     setLoading(true);
     const fetchValidWords = async () => {
       let validWords = [];
@@ -601,9 +633,8 @@ const VocabularyCards = ({ onBack }) => {
         // Try original API with CORS proxy first
         let words = [];
         try {
-          const res = await fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent('https://random-word-api.herokuapp.com/word?number=' + (10 - validWords.length))}`);
+          const res = await fetch('https://random-word-api.vercel.app/api?words=' + (10 - validWords.length));
           const data = await res.json();
-          console.log("Fetched random words:", data);
           if (Array.isArray(data)) {
             words = data;
           } else {
@@ -635,6 +666,7 @@ const VocabularyCards = ({ onBack }) => {
       validWords = validWords.slice(0, 10);
       setTopWords(validWords);
       localStorage.setItem('topVocab_' + today, JSON.stringify(validWords));
+      localStorage.setItem('topVocab_time_' + today, now.toString());
       setLoading(false);
     };
     fetchValidWords();
