@@ -601,8 +601,14 @@ const VocabularyCards = ({ onBack }) => {
         // Try original API with CORS proxy first
         let words = [];
         try {
-          const res = await fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent('https://random-word-api.herokuapp.com/word?number=' + (10 - validWords.length))}`);s
-          words = await res.json();
+          const res = await fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent('https://random-word-api.herokuapp.com/word?number=' + (10 - validWords.length))}`);
+          const data = await res.json();
+          console.log("Fetched random words:", data);
+          if (Array.isArray(data)) {
+            words = data;
+          } else {
+            throw new Error("Invalid data format");
+          }
         } catch {
           // Fallback to a curated word list if API fails
           const fallbackWords = ['serendipity', 'ephemeral', 'mellifluous', 'ubiquitous', 'serendipitous', 'quintessential', 'perspicacious', 'magnanimous', 'eloquent', 'resilient', 'authentic', 'profound', 'enigmatic', 'luminous', 'tranquil', 'arduous', 'benevolent', 'diligent', 'eloquent', 'frugal', 'gratitude', 'humility', 'integrity', 'jubilant', 'kindness'];
