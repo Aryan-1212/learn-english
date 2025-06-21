@@ -598,12 +598,21 @@ const VocabularyCards = ({ onBack }) => {
       let tries = 0;
       while (validWords.length < 10 && tries < 30) {
         tries++;
-        // Fetch up to 10 words at a time
-        const res = await fetch('https://random-word-api.herokuapp.com/word?number=' + (10 - validWords.length));
+        // Try alternative API first (no CORS restrictions)
         let words = [];
         try {
-          words = await res.json();
-        } catch { words = []; }
+          const res = await fetch('https://api.api-ninjas.com/v1/randomword?type=noun&limit=' + (10 - validWords.length));
+          const data = await res.json();
+          words = Array.isArray(data) ? data.map(item => item.word) : [data.word];
+        } catch {
+          // Fallback to original API with CORS proxy
+          try {
+            const res = await fetch('https://cors-anywhere.herokuapp.com/https://random-word-api.herokuapp.com/word?number=' + (10 - validWords.length));
+            words = await res.json();
+          } catch {
+            words = [];
+          }
+        }
         // Check each word in dictionaryapi.dev
         const checks = await Promise.all(words.map(async word => {
           try {
