@@ -400,7 +400,6 @@ function AppContent() {
     utterance.onstart = () => {
       setIsSpeaking(true);
       speechStartTime = performance.now();
-      console.log("Speech started at:", speechStartTime);
       
       // Start real-time lip sync animation
       const animateLipSync = () => {
@@ -441,7 +440,6 @@ function AppContent() {
       if (animationId) {
         cancelAnimationFrame(animationId);
       }
-      console.log("Speech ended");
     };
 
     utterance.onerror = (event) => {
@@ -450,7 +448,6 @@ function AppContent() {
       if (animationId) {
         cancelAnimationFrame(animationId);
       }
-      console.error("Speech error:", event);
     };
 
     window.speechSynthesis.speak(utterance);
@@ -472,10 +469,18 @@ function AppContent() {
 
       let systemPrompt = "";
       
-      if (mode === 'conversation' && conversationType) {
+      // Explicit logic to ensure correct prompt is used
+      if (mode === 'conversation') {
+        // Role-play mode - always use role-play prompt
         const selectedType = conversationTypes.find(type => type.value === conversationType);
-        systemPrompt = selectedType ? selectedType.prompt : "";
-      } else {
+        if (selectedType) {
+          systemPrompt = selectedType.prompt;
+        } else {
+          // Fallback to a default role-play prompt if conversationType is not found
+          systemPrompt = `You are a friendly person having a casual conversation. Stay in character as a conversational partner. Greet the other person, talk naturally, and ask simple questions to keep the conversation going. Only ask questions or respond as a conversational partner. Keep responses under 25 words. Start the conversation now by greeting your conversation partner and asking your first question.`;
+        }
+      } else if (mode === 'talk') {
+        // Tutor mode - always use tutor prompt
         systemPrompt = `You are an experienced and encouraging English tutor helping a student improve their English skills. Your role is to:
 
 1. **Provide detailed explanations** when correcting grammar, vocabulary, or pronunciation
@@ -514,8 +519,6 @@ Remember: You're not just correcting mistakes, you're helping someone become mor
       // Remove leading 'Assistant:' (case-insensitive, with or without space)
       responseText = responseText.replace(/^Assistant:\s*/i, "");
       
-      console.log("API Response:", responseText);
-      
       setConversation((prev) => [
         ...prev,
         { role: "assistant", content: responseText },
@@ -524,7 +527,6 @@ Remember: You're not just correcting mistakes, you're helping someone become mor
       speakResponse(responseText);
       setIsModelLoading(false);
     } catch (error) {
-      console.error("Error:", error);
       setResponse(`Error: ${error.message}`);
       setIsModelLoading(false);
     }

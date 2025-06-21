@@ -19,13 +19,13 @@ function AvatarModel({ isSpeaking, visemeData }) {
       // Log all bones in the model
       scene.traverse((child) => {
         if (child.isBone) {
-          console.log('Bone:', child.name);
+          // Bone found
         }
       });
       // Log all morph targets in the model
       scene.traverse((child) => {
         if (child.isMesh && child.morphTargetDictionary) {
-          console.log("Available morph targets:", Object.keys(child.morphTargetDictionary));
+          // Available morph targets found
           
           // Store original morph target influences
           child.userData.originalMorphTargets = {};
@@ -44,7 +44,7 @@ function AvatarModel({ isSpeaking, visemeData }) {
   // Reset all morph targets to neutral when speech ends
   useEffect(() => {
     if (scene && !isSpeaking) {
-      console.log("Speech ended - resetting morph targets to neutral");
+      // Speech ended - resetting morph targets to neutral
       scene.traverse((child) => {
         if (child.isMesh && child.morphTargetDictionary) {
           // Reset all targets to original neutral values

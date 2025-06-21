@@ -230,7 +230,7 @@ const GrammarCorrector = ({ onBack }) => {
       const correction = await correctGrammar(sentence);
       setResult(correction);
     } catch (error) {
-      console.error('Error correcting grammar:', error);
+      // Error correcting grammar
     } finally {
       setLoading(false);
     }
