@@ -601,9 +601,14 @@ const VocabularyCards = ({ onBack }) => {
         // Try alternative API first (no CORS restrictions)
         let words = [];
         try {
-          const res = await fetch('https://api.api-ninjas.com/v1/randomword?type=noun&limit=' + (10 - validWords.length));
-          const data = await res.json();
-          words = Array.isArray(data) ? data.map(item => item.word) : [data.word];
+          // API Ninjas doesn't support limit parameter, so we'll fetch multiple requests
+          const promises = Array(10 - validWords.length).fill().map(() => 
+            fetch('https://api.api-ninjas.com/v1/randomword?type=noun')
+          );
+          const responses = await Promise.all(promises);
+          const dataPromises = responses.map(res => res.json());
+          const dataArray = await Promise.all(dataPromises);
+          words = dataArray.map(item => item.word).filter(Boolean);
         } catch {
           // Fallback to original API with CORS proxy
           try {
